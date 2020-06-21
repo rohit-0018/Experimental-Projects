@@ -1,0 +1,29 @@
+.main-heading {
+    background-color: greenyellow;
+    text-align: center;
+    font-size: 90px;
+    color:white;
+    overflow: hidden;
+    padding: 2%;
+}
+.main-heading-text {
+    background-color: white;
+    border-radius: 50%;
+    border-color: greenyellow;
+    border-style: dotted;
+    color: black;
+    text-align: center;
+    width:150px;
+    margin: 0 auto;
+    height:150px;
+}
+.article {
+    box-shadow: 5px 5px 10px grey;
+    margin:1%;
+}
+.article-section {
+    padding: 2%;
+}
+.article-section b {
+    font-size: 100px;
+}

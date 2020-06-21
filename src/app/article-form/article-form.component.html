@@ -1,0 +1,83 @@
+<div class="alert  error-msg" [ngClass] = "displayMessage.class" *ngIf = "showErrorMessage" role="alert">
+    {{displayMessage?.message}}
+  </div>
+  <a routerLink= "/articles" class="nav-btn"><button class="btn btn-success">Go to Articles</button></a>
+  <div class="container">
+    <h1 class="m-4">A Blogging Place</h1>
+      <div class="row">
+          <div class="col-sm-9">
+            <div class="card">
+                <div class="card-header p-2">
+                  BLOGGING IS MY PASSION
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Please add an article</h5>
+                  <div class="form-group">
+                    <label for="title">Blog Logo</label>
+                    <input required id="logo" maxlength=2 (focus)="showPreview = true ;showBlogTitle = false" [(ngModel)]="blogLogo" class="form-control" type="text" name="logo">
+                  </div>
+                  <div class="form-group">
+                    <label for="title">Title</label>
+                    <input required id="title"  [(ngModel)]="blogTitle" class="form-control" type="text" name="title">
+                  </div>
+                  <div class="form-group">
+                    <label for="article">Text</label>
+                    <textarea required id="article" #Content [(ngModel)]="content" class="form-control" name="article" rows="3"></textarea>
+                  </div>
+                  <button class="btn btn-primary" (click)="saveFormData() ;showPreview = false ; showBlogTitle = true">Submit</button>
+                </div>
+              </div>
+          </div>
+          <div class="col-sm-3 p-2">
+              <ng-container *ngIf="showBlogTitle">
+                <h4>Blogs</h4>
+                <div class="blog-title-section-preview" *ngFor="let article of articles">
+                  <button class="btn btn-success">
+                      {{ article.blogTitle }}
+                  </button>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="showPreview">
+                <h4>Blog Preview</h4>
+                <div class="container-fluid">
+                  <div class="row mb-2 article">
+                      <div class="col-sm-3 main-heading">
+                          <div class="main-heading-text">
+                              {{blogLogo}}
+                          </div>
+                      </div>
+                      <div class="col-sm-9 border article-section">
+                          <h5><p align = "justify"><b>{{blogTitle[0]}}</b>{{blogTitle | slice:1}}</p></h5>
+                          <p align = "justify">
+                              {{content}}
+                          </p>
+                      </div> 
+                  </div>
+                </div>
+              </ng-container>
+          </div>
+      </div>
+    
+    
+    <!-- <div class="card">
+      <div class="card-header p-2">
+        BLOGGING IS MY PASSION
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Please add an article</h5>
+        <div class="form-group">
+          <label for="title">Blog Logo</label>
+          <input required id="logo"  [(ngModel)]="blogLogo" class="form-control" type="text" name="logo">
+        </div>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input required id="title"  [(ngModel)]="blogTitle" class="form-control" type="text" name="title">
+        </div>
+        <div class="form-group">
+          <label for="article">Text</label>
+          <textarea required id="article" #Content [(ngModel)]="content" class="form-control" name="article" rows="3"></textarea>
+        </div>
+        <button class="btn btn-primary" (click)= "saveFormData()">Submit</button>
+      </div>
+    </div> -->
+</div>

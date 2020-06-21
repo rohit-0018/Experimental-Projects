@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    overflow-wrap: break-word;
+}
+.article-main-heading {
+    background-color: tomato;
+    text-align: center;
+    font-size: 100px;
+    color:white;
+    overflow: hidden;
+}
+.article {
+    box-shadow: 5px 5px 10px grey;
+    margin:1%;
+}
+.article-section {
+    padding: 2%;
+}
+.border {
+    border: 5px dotted maroon; 
+}

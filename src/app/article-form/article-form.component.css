@@ -1,0 +1,55 @@
+* {
+    overflow-wrap: break-word;
+}
+.error-msg {
+    /* color:black; */
+    text-align: center;
+}
+.blog-title-section-preview {
+    margin:2%;
+}
+.nav-btn {
+    margin:2%;
+    margin-top:2%;
+}
+.mini-heading{
+    font-size:14px;
+    color:white;
+    background-color: tomato;
+    overflow:hidden;
+}
+.mini-article-section {
+    font-size:10px;
+    overflow:hidden
+}
+.main-heading {
+    background-color: greenyellow;
+    text-align: center;
+    font-size: 30px;
+    color:white;
+    overflow: hidden;
+    padding: 2%;
+}
+.main-heading-text {
+    background-color: white;
+    border-radius: 50%;
+    border-color: greenyellow;
+    border-style: dotted;
+    color: black;
+    text-align: center;
+    width:50px;
+    margin: 0 auto;
+    height:50px;
+    overflow: hidden;
+}
+.article {
+    box-shadow: 5px 5px 10px grey;
+    margin:1%;
+}
+.article-section {
+    padding: 2%;
+    overflow: hidden;
+}
+.article-section b {
+    font-size: 40px;
+}

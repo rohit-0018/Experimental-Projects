@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <a routerLink= "/form" class="pull-right"><button class="btn btn-success">Add a blog</button></a>
+    <div class="container">
+        <div class="row mb-2 article" *ngFor= "let article of articles">
+            <div class="col-sm-3 main-heading">
+                <div class="main-heading-text">
+                    {{article?.blogLogo}}
+                </div>
+            </div>
+            <div class="col-sm-9 article-section">
+                <h4><b>{{article?.blogTitle[0]}}</b>{{article?.blogTitle | slice:1}}</h4>
+                <p align = "justify">
+                    {{article?.content}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
